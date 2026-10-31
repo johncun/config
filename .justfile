@@ -24,3 +24,8 @@ sbxx:
 [no-cd]
 sbx-new name template-name="dev:v4":
     sbx run --name {{name}} --template docker.io/library/{{template-name}} shell .
+
+[no-cd]
+pull-config name target
+    curl https://raw.githubusercontent.com/johncun/config/refs/heads/master/{{name}} > {{target}}
+
